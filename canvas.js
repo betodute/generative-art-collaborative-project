@@ -8,9 +8,11 @@ function setup () {
   createCanvas(windowWidth, windowHeight);
   stroke(255, 50);
   fill(255, 0, 0, 100);
+  frameRate(10);
 };
 
 function draw() {
+  background('#0E8AD6')
   var ang1 = TWO_PI * noise(0.01 * frameCount + 10) + mouseX / 20;
   var ang2 = TWO_PI * noise(0.01 * frameCount + 20) + mouseY / 20;
   var ang3 = TWO_PI * noise(0.01 * frameCount + 30) + (mouseX + mouseY) / 20;
