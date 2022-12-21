@@ -9,9 +9,8 @@ class CircleBoom {
 
   render() {
     noStroke();
-    frameRate(20);
     fill(this.r, this.g, this.b, 100);
-    circle(this.x, this.y, 150);
+    circle(this.x, this.y, 100);
   };
   
-}
+};
