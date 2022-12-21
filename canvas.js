@@ -1,7 +1,7 @@
 const mainTitle = document.getElementById("mainTitle");
 mainTitle.innerHTML = "JS Generative Art"
 
-let circleBoom;
+let circleBoom, extraCanvas;
 
 
 function setup () {
@@ -9,10 +9,11 @@ function setup () {
   stroke(255, 50);
   fill(255, 0, 0, 100);
   frameRate(10);
+  extraCanvas = createGraphics(windowWidth, windowHeight);
+  extraCanvas.background('#0E8AD6')
 };
 
 function draw() {
-  background('#0E8AD6')
   var ang1 = TWO_PI * noise(0.01 * frameCount + 10) + mouseX / 20;
   var ang2 = TWO_PI * noise(0.01 * frameCount + 20) + mouseY / 20;
   var ang3 = TWO_PI * noise(0.01 * frameCount + 30) + (mouseX + mouseY) / 20;
@@ -37,6 +38,7 @@ function draw() {
       }
       translate()
       pop();
+      image(extraCanvas, 0, 0)
       circleBoom = new CircleBoom();
       circleBoom.render();
   }
