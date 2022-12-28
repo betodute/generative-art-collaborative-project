@@ -1,3 +1,6 @@
+const mainTitle = document.getElementById("mainTitle");
+mainTitle.innerHTML = "JS Generative Art"
+
 let layer1, layer2;
 let width = 500;
 let length = 500;
@@ -26,9 +29,9 @@ function draw() {
     noStroke();
     fill(0, 0, 0, 255);
 
-    var ang1 = TWO_PI * noise(0.01 * frameCount + 10) + mouseX / 20;
-    var ang2 = TWO_PI * noise(0.01 * frameCount + 20) + mouseY / 20;
-    var ang3 = TWO_PI * noise(0.01 * frameCount + 30) + (mouseX + mouseY) / 20;
+    var ang1 = TWO_PI * noise(0.01 * frameCount + 10) + mouseX / 100;
+    var ang2 = TWO_PI * noise(0.01 * frameCount + 20) + mouseY / 100;
+    var ang3 = TWO_PI * noise(0.01 * frameCount + 30) + (mouseX + mouseY) / 100;
     var rx = 60 * noise(0.01 * frameCount + 40);
     var tx = 200 * noise(0.01 * frameCount + 50);
     var size1 = 300 * noise(0.01 * frameCount + 60);
