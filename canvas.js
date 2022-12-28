@@ -4,7 +4,7 @@ mainTitle.innerHTML = "JS Generative Art"
 let circleBoom, extraCanvas;
 
 
-function setup () {
+function setup() {
   createCanvas(windowWidth, windowHeight);
   stroke(255, 50);
   fill(255, 0, 0, 100);
@@ -24,23 +24,23 @@ function draw() {
 
   translate(width / 2, height / 2);
   for (var i = 0; i < 8; i++) {
+    push();
+    rotate(ang1 + TWO_PI * i / 8);
+    translate(tx, 0);
+    rect(0, 0, size1, size1);
+    for (var j = 0; j < 6; j++) {
       push();
-      rotate(ang1 + TWO_PI * i / 8);
-      translate(tx, 0);
-      rect(0, 0, size1, size1);
-      for (var j = 0; j < 6; j++) {
-          push();
-          rotate(ang2 + TWO_PI * j / 6);
-          translate(rx, 0);
-          rotate(ang3);
-          rect(rx, 0, size2, size2);
-          pop();
-      }
-      translate()
+      rotate(ang2 + TWO_PI * j / 6);
+      translate(rx, 0);
+      rotate(ang3);
+      rect(rx, 0, size2, size2);
       pop();
-      image(extraCanvas, 0, 0)
-      circleBoom = new CircleBoom();
-      circleBoom.render();
+    }
+    translate()
+    pop();
+    image(extraCanvas, 0, 0)
+    circleBoom = new CircleBoom();
+    circleBoom.render();
   }
 
 }
