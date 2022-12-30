@@ -5,7 +5,14 @@
   color: cornflowerblue;
 }
 
+/* body {
+  background-color: black;
+} */
+
 main {
   text-align: center;
 }
 
+canvas {
+  border-radius: 12px;
+}

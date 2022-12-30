@@ -1,6 +1,3 @@
-const mainTitle = document.getElementById("mainTitle");
-mainTitle.innerHTML = "JS Generative Art"
-
 let layer1, layer2;
 let width = 500;
 let length = 500;
