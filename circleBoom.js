@@ -8,6 +8,7 @@ class CircleBoom {
   };
 
   render() {
+    frameRate(5)
     noStroke();
     fill(this.r, this.g, this.b, 100);
     circle(this.x, this.y, 100);
