@@ -14,14 +14,13 @@ function setup () {
 };
 
 function draw() {
- 
-  circleBoom = new CircleBoom();
-  circleBoom.render();
   
   image(extraCanvas, 0, 0);
+
   shapeRotate = new ShapeRotate();
-  extraCanvas.shapeRotate.render();
-  
-  
+  shapeRotate.render();
+
+  circleBoom = new CircleBoom();
+  circleBoom.render();
 };
 
