@@ -4,7 +4,7 @@ mainTitle.innerHTML = "JS Generative Art"
 let circleBoom, extraCanvas, shapeRotate;
 
 
-function setup () {
+function setup() {
   createCanvas(windowWidth, windowHeight);
   layer2 = createGraphics(windowWidth, windowHeight);
   background(0)
