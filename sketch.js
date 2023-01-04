@@ -29,8 +29,8 @@ function draw() {
     var ang1 = TWO_PI * noise(0.01 * frameCount + 10) + mouseX / 100;
     var ang2 = TWO_PI * noise(0.01 * frameCount + 20) + mouseY / 100;
     var ang3 = TWO_PI * noise(0.01 * frameCount + 30) + (mouseX + mouseY) / 100;
-    var rx = 60 * noise(0.01 * frameCount + 40);
-    var tx = 200 * noise(0.01 * frameCount + 50);
+    var rx = 60 * noise(0.01 * frameCount + 40) + mouseX / 7;
+    var tx = 200 * noise(0.01 * frameCount + 50) + mouseY / 7;
     var size1 = 300 * noise(0.01 * frameCount + 60);
     var size2 = 100 * noise(0.01 * frameCount + 60);
 
