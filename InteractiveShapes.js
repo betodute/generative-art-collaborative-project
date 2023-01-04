@@ -1,19 +1,20 @@
-class ShapeRotate {
+class InteractiveShapes {
     constructor() {
-        this.ang1 = TWO_PI * noise(0.01 * frameCount + 10) + mouseX / 20;
-        this.ang2 = TWO_PI * noise(0.01 * frameCount + 20) + mouseY / 20;
-        this.ang3 = TWO_PI * noise(0.01 * frameCount + 30) + (mouseX + mouseY) / 20;
-        this.rx = 60 * noise(0.01 * frameCount + 40);
-        this.tx = 200 * noise(0.01 * frameCount + 50);
-        this.size1 = 200 * noise(0.01 * frameCount + 60);
-        this.size2 = 50 * noise(0.01 * frameCount + 60);
+        this.ang1 = TWO_PI * noise(0.01 * frameCount + 10) + mouseX / 100;
+        this.ang2 = TWO_PI * noise(0.01 * frameCount + 20) + mouseY / 100;
+        this.ang3 = TWO_PI * noise(0.01 * frameCount + 30) + (mouseX + mouseY) / 100;
+        this.rx = 60 * noise(0.01 * frameCount + 40) + mouseX / 7;
+        this.tx = 200 * noise(0.01 * frameCount + 50) + mouseY / 7;
+        this.size1 = 300 * noise(0.01 * frameCount + 60);
+        this.size2 = 100 * noise(0.01 * frameCount + 60);
     }
 
     render() {
-        stroke(255, 50);
+        frameRate(30);
+        rectMode(CENTER);
+        noStroke();
         fill(0, 0, 0, 255);
         translate(width / 2, height / 2);
-
         for (var i = 0; i < 8; i++) {
             push();
             rotate(this.ang1 + TWO_PI * i / 8);
@@ -29,6 +30,6 @@ class ShapeRotate {
             }
             translate()
             pop();
-        };
-    };
-};
+        }
+    }
+}
