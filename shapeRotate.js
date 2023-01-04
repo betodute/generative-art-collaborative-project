@@ -11,7 +11,7 @@ class ShapeRotate {
 
     render() {
         stroke(255, 50);
-        fill(255, 0, 0, 100);
+        fill(0, 0, 0, 255);
         translate(width / 2, height / 2);
 
         for (var i = 0; i < 8; i++) {
