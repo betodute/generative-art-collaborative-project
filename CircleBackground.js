@@ -8,7 +8,7 @@ class CircleBackground {
   };
 
   render() {
-    graphicsLayer.frameRate(30);
+    graphicsLayer.frameRate(50);
     graphicsLayer.noStroke();
     graphicsLayer.fill(this.r, this.g, this.b, 100);
     graphicsLayer.circle(this.x, this.y, 100);
