@@ -8,10 +8,10 @@ class CircleBackground {
   };
 
   render() {
-    layer2.frameRate(30);
-    layer2.noStroke();
-    layer2.fill(this.r, this.g, this.b, 100);
-    layer2.circle(this.x, this.y, 100);
+    graphicsLayer.frameRate(30);
+    graphicsLayer.noStroke();
+    graphicsLayer.fill(this.r, this.g, this.b, 100);
+    graphicsLayer.circle(this.x, this.y, 100);
   };
 
 };
