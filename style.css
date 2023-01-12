@@ -32,9 +32,6 @@ canvas {
 }
 
 #background-buttons {
-  justify-content: center;
-  align-items: center;
   text-align: center;
-  align-self: center;
-  align-content: center;
+  font-size: ;
 }
