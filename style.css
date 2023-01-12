@@ -30,3 +30,11 @@ canvas {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
   margin-top: 5px;
 }
+
+#background-buttons {
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  align-self: center;
+  align-content: center;
+}

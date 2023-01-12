@@ -1,5 +1,5 @@
 let circleBackground, interactiveShapes, graphicsLayer;
-let button;
+let button, triangleButton, circleButton, hexButton;
 const shape = {
   rect: 'rect',
   circle: 'circle',
@@ -8,9 +8,9 @@ const shape = {
 let currentShape = shape.rect;
 
 function setup() {
-  let canvas = createCanvas(500, 500);
+  let canvas = createCanvas(700, 450);
   canvas.parent("p5-canvas");
-  graphicsLayer = createGraphics(500, 500);
+  graphicsLayer = createGraphics(700, 450);
   button = select("#shape-button");
   button.mousePressed(changeShape);
 };
