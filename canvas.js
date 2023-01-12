@@ -1,5 +1,5 @@
 let circleBackground, interactiveShapes, graphicsLayer;
-let button, triangleButton, circleButton, hexButton;
+let button, triangleButton, circleButton, squareButton;
 const shape = {
   rect: 'rect',
   circle: 'circle',
