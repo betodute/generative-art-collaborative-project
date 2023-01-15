@@ -1,5 +1,5 @@
 class InteractiveShapes {
-    constructor() {
+    constructor(selectedShape) {
         this.ang1 = TWO_PI * noise(0.01 * frameCount + 10) /*+ mouseX / 100*/;
         this.ang2 = TWO_PI * noise(0.01 * frameCount + 20) /*+ mouseY / 100*/;
         this.ang3 = TWO_PI * noise(0.01 * frameCount + 30) /*+ (mouseX + mouseY) / 100*/;
@@ -7,6 +7,13 @@ class InteractiveShapes {
         this.tx = 200 * noise(0.01 * frameCount + 50) + mouseY / 7;
         this.size1 = 300 * noise(0.01 * frameCount + 60);
         this.size2 = 100 * noise(0.01 * frameCount + 60);
+        this.selectedShape = selectedShape;
+        this.shape = {
+            square: 'square',
+            circle: 'circle',
+            triangle: 'triangle',
+        }
+
     }
 
     render() {
@@ -19,38 +26,57 @@ class InteractiveShapes {
             push();
             rotate(this.ang1 + TWO_PI * i / 8);
             translate(this.tx, 0);
-            switch (currentShape) {
-                case shape.rect:
-                    rect(0, 0, this.size1, this.size1);
-                    break;
-                case shape.circle:
+            // if (this.selectedShape === 'circle') {
+            //     circle(0, 0, this.size1);
+            // }
+            // if (this.selectedShape === 'triangle') {
+            //     triangle(0, 0, this.rx, this.rx, this.tx, this.tx);
+            // }
+            // if (this.selectedShape === 'square') {
+            //     rect(0, 0, this.size1, this.size1);
+            // }
+            switch (selectedShape) {
+                case (selectedShape == circle):
                     circle(0, 0, this.size1);
                     break;
-                case shape.triangle:
+                case (selectedShape == triangle):
                     triangle(0, 0, this.rx, this.rx, this.tx, this.tx)
                     break;
+                case (selectedShape == square):
+                    rect(0, 0, this.size1, this.size1);
+                    break;
             }
-            for (var j = 0; j < 6; j++) {
-                push();
-                rotate(this.ang2 + TWO_PI * j / 6);
-                translate(this.rx, 0);
-                rotate(this.ang3);
-                switch (currentShape) {
-                    case shape.rect:
-                        rect(this.rx, 0, this.size2, this.size2);
-                        break;
-                    case shape.circle:
-                        circle(this.rx, 0, this.size2);
-                        break;
-                    case shape.triangle:
-                        triangle(this.size1, this.size2, this.rx, this.rx, this.tx, this.tx)
-                        break;
-                }
-                pop();
+        }
+        for (var j = 0; j < 6; j++) {
+            push();
+            rotate(this.ang2 + TWO_PI * j / 6);
+            translate(this.rx, 0);
+            rotate(this.ang3);
+            // if (this.selectedShape === 'circle') {
+            //     circle(this.rx, 0, this.size2);
+            // }
+            // if (this.selectedShape === 'triangle') {
+            //     triangle(this.size1, this.size2, this.rx, this.rx, this.tx, this.tx);
+            // }
+            // if (this.selectedShape === 'square') {
+            //     rect(this.rx, 0, this.size2, this.size2);
+            // }
+            switch (selectedShape) {
+                case (selectedShape == circle):
+                    circle(this.rx, 0, this.size2);
+                    break;
+
+                case (selectedShape == triangle):
+                    triangle(this.size1, this.size2, this.rx, this.rx, this.tx, this.tx)
+                    break;
+                case (selectedShape == square):
+                    rect(this.rx, 0, this.size2, this.size2);
+                    break;
             }
-            translate()
             pop();
         }
+        translate()
+        pop();
     }
 }
 
