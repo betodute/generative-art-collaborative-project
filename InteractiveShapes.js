@@ -54,4 +54,4 @@ class InteractiveShapes {
     }
 }
 
-circle(0, 0, this.size1)
+//circle(0, 0, this.size1)
