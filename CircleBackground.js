@@ -9,7 +9,7 @@ class CircleBackground {
   };
 
   render() {
-
+    
     graphicsLayer.noStroke();
 
     if (this.selectedShape === "circle") {
@@ -22,7 +22,7 @@ class CircleBackground {
       graphicsLayer.fill(this.r, this.g, this.b, 100);
     };
 
-    if (this.slectedShape === "square") {
+    if (this.selectedShape === "square") {
       graphicsLayer.square(this.x - 100, this.y - 100, 200);
       graphicsLayer.fill(this.r, this.g, this.b, 100);
     }
