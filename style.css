@@ -31,6 +31,6 @@ canvas {
   margin-top: 5px;
 }
 
-#background-buttons {
+#background-buttons #foreground-buttons {
   text-align: center;
 }
