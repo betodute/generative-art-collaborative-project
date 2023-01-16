@@ -14,23 +14,15 @@ canvas {
   box-shadow: 0 3px 5px rgba(0, 0, 0, 0.5);
 }
 
-#p5-canvas {
+#intro-text {
   text-align: center;
 }
 
-#button-div {
+#p5-canvas-holder {
   text-align: center;
 }
 
-#shape-button {
-  background-color: cornflowerblue;
-  border-radius: 7px;
-  height: 40px;
-  width: 130px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
-  margin-top: 5px;
-}
-
-#background-buttons #foreground-buttons {
+#buttons-holder {
   text-align: center;
+  margin: 10px;
 }
