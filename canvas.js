@@ -1,14 +1,5 @@
-let circleBackground, interactiveShapes, graphicsLayer;
-let button, fgTriangleButton, fgCircleButton, fgSquareButton, bgTriangleButton, bgCircleButton, bgSquareButton;
-let backgroundShape, foregroundShape;
-
-// const shape = {
-//   rect: 'rect',
-//   circle: 'circle',
-//   triangle: 'triangle',
-// }
-
-// let currentShape = shape.rect;
+let backgroundShapes, foregroundShapes, backgroundShape, foregroundShape, graphicsLayer;
+let bgTriangleButton, bgCircleButton, bgSquareButton, fgTriangleButton, fgCircleButton, fgSquareButton;
 
 if (!backgroundShape) {
   backgroundShape = "circle";
@@ -20,26 +11,10 @@ if (!foregroundShape) {
 
 
 function setup() {
-  let canvas = createCanvas(700, 450);
+  let canvas = createCanvas(700, 700);
   canvas.parent("p5-canvas");
-  graphicsLayer = createGraphics(700, 450);
+  graphicsLayer = createGraphics(700, 700);
   frameRate(5);
-
-  fgCircleButton = select("#fg-circle-button");
-  fgTriangleButton = select("#fg-triangle-button");
-  fgSquareButton = select("#fg-square-button");
-
-  fgCircleButton.mousePressed(() => {
-    foregroundShape = "circle"
-  });
-
-  fgTriangleButton.mousePressed(() => {
-    foregroundShape = "triangle"
-  });
-
-  fgSquareButton.mousePressed(() => {
-    foregroundShape = "square"
-  });
 
   bgCircleButton = select("#bg-circle-button");
   bgTriangleButton = select("#bg-triangle-button");
@@ -57,33 +32,31 @@ function setup() {
     backgroundShape = "square"
   });
 
-  // button = select("#shape-button");
-  // button.mousePressed(changeShape);
+  fgCircleButton = select("#fg-circle-button");
+  fgTriangleButton = select("#fg-triangle-button");
+  fgSquareButton = select("#fg-square-button");
+
+  fgCircleButton.mousePressed(() => {
+    foregroundShape = "circle"
+  });
+
+  fgTriangleButton.mousePressed(() => {
+    foregroundShape = "triangle"
+  });
+
+  fgSquareButton.mousePressed(() => {
+    foregroundShape = "square"
+  });
 };
 
-// function changeShape() {
-//   switch (currentShape) {
-//     case shape.rect:
-//       currentShape = shape.circle;
-//       break;
-//     case shape.circle:
-//       currentShape = shape.triangle;
-//       break;
-//     case shape.triangle:
-//       currentShape = shape.rect;
-//       break;
-//   }
-// };
-
 function draw() {
-
   frameRate(5);
   background(0);
   image(graphicsLayer, 0, 0);
 
-  circleBackground = new CircleBackground(backgroundShape);
-  circleBackground.render();
+  backgroundShapes = new BackgroundShapes(backgroundShape);
+  backgroundShapes.render();
 
-  interactiveShapes = new InteractiveShapes(foregroundShape);
-  interactiveShapes.render();
+  foregroundShapes = new ForegroundShapes(foregroundShape);
+  foregroundShapes.render();
 }
