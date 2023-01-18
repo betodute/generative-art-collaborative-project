@@ -5,7 +5,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width" />
 
-  <title>Generative Art Collaborative Project</title>
+  <title>Playful Shapes</title>
 
   <!-- CDN P5.JS Library -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.1/p5.min.js"></script>
@@ -26,25 +26,41 @@
 </head>
 
 <body id="root">
-  <h1 id="mainTitle">JS Generative Art</h1>
+  <h1 id="mainTitle">Playful Shapes</h1>
   <div class="container-fluid">
     <div class="row">
-      <div class="col-lg-4" id="intro-text">This is a generative art project using the P5 JavaScript library made by <a
-          href="https://github.com/gravityskunk">Matt</a> and <a href="https://github.com/betodute">Beto</a>. <p></p>
-        The code is structured using conventional programing principles by seperating JS files by concern. We used three
-        files, one for the background, one for the foreground and one as a joiner. <p></p> The P5 Draw() function is
-        called 60 times per second as default for animation and that is where we instantiate the background and
-        foreground class objects. We decided to use class objects to allow for a cleaner sepertion of concerns. <p></p>
-        Check out the repository for details: <a
-          href="https://github.com/betodute/generative-art-collaborative-project">
-          https://github.com/betodute/generative-art-collaborative-project </a>
+      <div class="col-lg-4" id="intro-text">
+        <p>
+          Playful Shapes is a generative art project made by <a href="https://github.com/gravityskunk">Matthew</a> and
+          <a href="https://github.com/betodute">Beto</a> using the P5 JavaScript library .
+        </p>
+        <p>
+          The code is structured using conventional programming principles by separating JS files by concern. The class
+          objects for the background and foreground shapes are called separately inside the canvas script to create the
+          layered effect.
+        </p>
+        <p>
+          The P5 Draw() function is called several times per second to create animation. The buttons below the canvas
+          change the background shapes and colors, and if the user flips the switch, the buttons will then control the
+          foreground shapes. While several factors in the background and foreground are affected by random noise, the
+          position of the user's mouse cursor also affects the way that the foreground shapes move.
+        </p>
+        <p>
+          Play around and see what combination of shapes and colors you like best, then interact with the animation by
+          moving your mouse!
+        </p>
+        <p>
+          If you would like to know more about the code, check out our repository for more details: <a
+            href="https://github.com/betodute/generative-art-collaborative-project">
+            https://github.com/betodute/generative-art-collaborative-project </a>
+        </p>
       </div>
       <div class="col-lg-8 mb-3" id="right-column">
         <div id="p5-canvas"></div>
         <div class="d-flex justify-content-center buttons-holder">
           <div class="form-check form-switch">
             <input class="form-check-input" type="checkbox" role="switch" id="toggle-switch">
-            <label class="form-check-label" for="toggle-switch">Control foreground shapes</label>
+            <label class="form-check-label" for="toggle-switch">Change foreground shapes</label>
           </div>
         </div>
         <div class="buttons-holder">
