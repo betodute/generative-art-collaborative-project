@@ -5,6 +5,9 @@ class BackgroundShapes {
     this.r = random(255);
     this.g = random(255);
     this.b = random(255);
+    this.blueToneR = random(0, 2);
+    this.blueToneG = random(0, 25);
+    this.blueToneB = random(100, 200);
     this.backgroundShape = backgroundShape;
   };
 
@@ -13,7 +16,7 @@ class BackgroundShapes {
 
     if (backgroundShape === "circle") {
       graphicsLayer.circle(this.x, this.y, 200);
-      graphicsLayer.fill(this.r, this.g, this.b, 100);
+      graphicsLayer.fill(this.blueToneR, this.blueToneG, this.blueToneB, 100);
     };
 
     if (backgroundShape === "triangle") {
