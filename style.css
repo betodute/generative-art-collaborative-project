@@ -1,3 +1,14 @@
+canvas {
+  border-radius: 12px;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.5);
+}
+
+.buttons-holder {
+  text-align: center;
+  align-items: center;
+  margin: 10px;
+}
+
 #mainTitle {
   margin-top: 2;
   text-align: center;
@@ -5,25 +16,11 @@
   color: cornflowerblue;
 }
 
-main {
-  text-align: center;
-}
-
-canvas {
-  border-radius: 12px;
-  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.5);
-}
-
 #intro-text {
   font-size: 1.2em;
   font-family: 'Archivo', sans-serif;
 }
 
-#p5-canvas-holder {
+#right-column {
   text-align: center;
-}
-
-#buttons-holder {
-  text-align: center;
-  margin: 10px;
 }

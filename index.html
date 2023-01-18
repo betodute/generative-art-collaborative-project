@@ -24,15 +24,30 @@
     integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
 
 </head>
+
 <body id="root">
   <h1 id="mainTitle">JS Generative Art</h1>
   <div class="container-fluid">
     <div class="row">
-      <div class="col-lg-4" id="intro-text">This is a generative art project using the P5 JavaScript library made by <a href="https://github.com/gravityskunk">Matt</a> and <a href="https://github.com/betodute">Beto</a>. <p></p> The code is structured using conventional programing principles by seperating JS files by concern. We used three files, one for the background, one for the foreground and one as a joiner. <p></p> The P5 Draw() function is called 60 times per second as default for animation and that is where we instantiate the background and foreground class objects. We decided to use class objects to allow for a cleaner sepertion of concerns. <p></p> Check out the repository for details: <a href="https://github.com/betodute/generative-art-collaborative-project"> https://github.com/betodute/generative-art-collaborative-project </a>
+      <div class="col-lg-4" id="intro-text">This is a generative art project using the P5 JavaScript library made by <a
+          href="https://github.com/gravityskunk">Matt</a> and <a href="https://github.com/betodute">Beto</a>. <p></p>
+        The code is structured using conventional programing principles by seperating JS files by concern. We used three
+        files, one for the background, one for the foreground and one as a joiner. <p></p> The P5 Draw() function is
+        called 60 times per second as default for animation and that is where we instantiate the background and
+        foreground class objects. We decided to use class objects to allow for a cleaner sepertion of concerns. <p></p>
+        Check out the repository for details: <a
+          href="https://github.com/betodute/generative-art-collaborative-project">
+          https://github.com/betodute/generative-art-collaborative-project </a>
       </div>
-      <div class="col-lg-8 mb-3" id="p5-canvas-holder">
+      <div class="col-lg-8 mb-3" id="right-column">
         <div id="p5-canvas"></div>
-        <div id="buttons-holder">
+        <div class="d-flex justify-content-center buttons-holder">
+          <div class="form-check form-switch">
+            <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+            <label class="form-check-label" for="flexSwitchCheckDefault">Control foreground shapes</label>
+          </div>
+        </div>
+        <div class="buttons-holder">
           <button class="btn btn-primary" id="bg-circle-button">
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle"
               viewBox="0 0 16 16">
@@ -54,7 +69,7 @@
             </svg>
           </button>
         </div>
-        <div>
+        <div class="buttons-holder">
           <button class="btn btn-primary" id="fg-circle-button">
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle"
               viewBox="0 0 16 16">
