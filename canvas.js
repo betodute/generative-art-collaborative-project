@@ -1,5 +1,14 @@
 let backgroundShapes, foregroundShapes, backgroundShape, foregroundShape, graphicsLayer;
-let bgTriangleButton, bgCircleButton, bgSquareButton, fgTriangleButton, fgCircleButton, fgSquareButton;
+let circleButton, triangleButton, squareButton;
+const toggleSwitch = document.getElementById("toggle-switch");
+let toggleStatus = false;
+toggleSwitch.addEventListener("change", function () {
+  if (toggleSwitch.checked) {
+    toggleStatus = true;
+  } else {
+    toggleStatus = false;
+  }
+})
 
 if (!backgroundShape) {
   backgroundShape = "circle";
@@ -9,44 +18,55 @@ if (!foregroundShape) {
   foregroundShape = "circle";
 };
 
-
 function setup() {
   let canvas = createCanvas(700, 700);
   canvas.parent("p5-canvas");
   graphicsLayer = createGraphics(700, 700);
   frameRate(5);
 
-  bgCircleButton = select("#bg-circle-button");
-  bgTriangleButton = select("#bg-triangle-button");
-  bgSquareButton = select("#bg-square-button");
+  circleButton = select("#circle-button");
+  triangleButton = select("#triangle-button");
+  squareButton = select("#square-button");
 
-  bgCircleButton.mousePressed(() => {
-    backgroundShape = "circle"
+  circleButton.mousePressed(() => {
+    if (toggleStatus == false) {
+      backgroundShape = "circle";
+    } else if (toggleStatus == true) {
+      foregroundShape = "circle";
+    }
   });
 
-  bgTriangleButton.mousePressed(() => {
-    backgroundShape = "triangle"
+  triangleButton.mousePressed(() => {
+    if (toggleStatus == false) {
+      backgroundShape = "triangle";
+    } else if (toggleStatus == true) {
+      foregroundShape = "triangle";
+    }
   });
 
-  bgSquareButton.mousePressed(() => {
-    backgroundShape = "square"
+  squareButton.mousePressed(() => {
+    if (toggleStatus == false) {
+      backgroundShape = "square";
+    } else if (toggleStatus == true) {
+      foregroundShape = "square";
+    }
   });
 
-  fgCircleButton = select("#fg-circle-button");
-  fgTriangleButton = select("#fg-triangle-button");
-  fgSquareButton = select("#fg-square-button");
+  // fgCircleButton = select("#fg-circle-button");
+  // fgTriangleButton = select("#fg-triangle-button");
+  // fgSquareButton = select("#fg-square-button");
 
-  fgCircleButton.mousePressed(() => {
-    foregroundShape = "circle"
-  });
+  // fgCircleButton.mousePressed(() => {
+  //   foregroundShape = "circle"
+  // });
 
-  fgTriangleButton.mousePressed(() => {
-    foregroundShape = "triangle"
-  });
+  // fgTriangleButton.mousePressed(() => {
+  //   foregroundShape = "triangle"
+  // });
 
-  fgSquareButton.mousePressed(() => {
-    foregroundShape = "square"
-  });
+  // fgSquareButton.mousePressed(() => {
+  //   foregroundShape = "square"
+  // });
 };
 
 function draw() {
