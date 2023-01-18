@@ -15,7 +15,8 @@ canvas {
 }
 
 #intro-text {
-  text-align: center;
+  font-size: 1.2em;
+  font-family: 'Archivo', sans-serif;
 }
 
 #p5-canvas-holder {
