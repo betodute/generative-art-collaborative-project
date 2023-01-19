@@ -24,7 +24,6 @@ function setup() {
   let canvas = createCanvas(700, 700);
   canvas.parent("p5-canvas");
   graphicsLayer = createGraphics(700, 700);
-  frameRate(5);
 
   circleButton = select("#circle-button");
   triangleButton = select("#triangle-button");
@@ -53,26 +52,9 @@ function setup() {
       foregroundShape = "square";
     }
   });
-
-  // fgCircleButton = select("#fg-circle-button");
-  // fgTriangleButton = select("#fg-triangle-button");
-  // fgSquareButton = select("#fg-square-button");
-
-  // fgCircleButton.mousePressed(() => {
-  //   foregroundShape = "circle"
-  // });
-
-  // fgTriangleButton.mousePressed(() => {
-  //   foregroundShape = "triangle"
-  // });
-
-  // fgSquareButton.mousePressed(() => {
-  //   foregroundShape = "square"
-  // });
 };
 
 function draw() {
-  frameRate(5);
   background(0);
   image(graphicsLayer, 0, 0);
 

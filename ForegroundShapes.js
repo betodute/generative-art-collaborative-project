@@ -19,17 +19,15 @@ class ForegroundShapes {
             stroke('blue');
             fill(255, 130, 0, 255);
         };
-
         if (backgroundShape === 'triangle') {
             stroke('green');
             fill(255, 160, 175, 255)
         };
-
         if (backgroundShape === 'square') {
             stroke('white');
             fill(5, 5, 5, 255);
         };
-        
+
         translate(width / 2, height / 2);
         for (var i = 0; i < 8; i++) {
             push();
