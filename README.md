@@ -7,4 +7,4 @@ The P5 Draw() function is called several times per second to create animation. T
 
 Play around and see what combination of shapes and colors you like best, then interact with the animation by moving your mouse!
 
-Special thanks to <a href="https://www.youtube.com/@TheCodingTrain">The Coding Train</a> and <a href="https://genekogan.com/">Gene Kogan</a> for inspiration, education, and code snippets.
+Special thanks to [The Coding Train](https://www.youtube.com/@TheCodingTrain) and [Gene Kogan](https://genekogan.com/) for inspiration, education, and code snippets.
