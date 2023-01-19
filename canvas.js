@@ -79,6 +79,6 @@ function draw() {
   backgroundShapes = new BackgroundShapes(backgroundShape);
   backgroundShapes.render();
 
-  foregroundShapes = new ForegroundShapes(foregroundShape);
+  foregroundShapes = new ForegroundShapes(foregroundShape, backgroundShape);
   foregroundShapes.render();
 }

@@ -1,5 +1,5 @@
 class ForegroundShapes {
-    constructor(foregroundShape) {
+    constructor(foregroundShape, backgroundShape) {
         this.ang1 = TWO_PI * noise(0.01 * frameCount + 10) /*+ mouseX / 100*/;
         this.ang2 = TWO_PI * noise(0.01 * frameCount + 20) /*+ mouseY / 100*/;
         this.ang3 = TWO_PI * noise(0.01 * frameCount + 30) /*+ (mouseX + mouseY) / 100*/;
@@ -8,13 +8,28 @@ class ForegroundShapes {
         this.size1 = 300 * noise(0.01 * frameCount + 60);
         this.size2 = 100 * noise(0.01 * frameCount + 60);
         this.foregroundShape = foregroundShape;
+        this.backgroundShape = backgroundShape;
     }
 
     render() {
         frameRate(30);
         rectMode(CENTER);
-        noStroke();
-        fill(0, 0, 0, 255);
+
+        if (backgroundShape === 'circle') {
+            stroke('blue');
+            fill(255, 130, 0, 255);
+        };
+
+        if (backgroundShape === 'triangle') {
+            stroke('green');
+            fill(255, 160, 175, 255)
+        };
+
+        if (backgroundShape === 'square') {
+            stroke('white');
+            fill(5, 5, 5, 255);
+        };
+        
         translate(width / 2, height / 2);
         for (var i = 0; i < 8; i++) {
             push();
