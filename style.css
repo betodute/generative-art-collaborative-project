@@ -10,7 +10,7 @@ canvas {
 }
 
 #mainTitle {
-  margin-top: 2;
+  margin: 1em;
   text-align: center;
   font-family: 'MuseoModerno', cursive;
   color: cornflowerblue;
