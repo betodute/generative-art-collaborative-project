@@ -1,7 +1,9 @@
 let backgroundShapes, foregroundShapes, backgroundShape, foregroundShape, graphicsLayer;
 let circleButton, triangleButton, squareButton;
+
 const toggleSwitch = document.getElementById("toggle-switch");
 let toggleStatus = false;
+
 toggleSwitch.addEventListener("change", function () {
   if (toggleSwitch.checked) {
     toggleStatus = true;

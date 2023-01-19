@@ -3,17 +3,17 @@ class BackgroundShapes {
     this.x = random(700);
     this.y = random(700);
     
-    this.blueToneR = random(0, 125);
+    this.blueToneR = random(0, 100);
     this.blueToneG = random(0, 125);
-    this.blueToneB = random(100, 255);
+    this.blueToneB = random(150, 255);
 
     this.greenToneR = random(25, 180);
-    this.greenToneG = random(75, 255);
+    this.greenToneG = random(125, 255);
     this.greenToneB = random(25, 240);
 
-    this.yellowToneR = random(150, 255);
-    this.yellowToneG = random(150, 255);
-    this.yellowToneB = random(0, 200);
+    this.yellowToneR = random(180, 255);
+    this.yellowToneG = random(180, 255);
+    this.yellowToneB = random(0, 255);
 
     this.backgroundShape = backgroundShape;
   };
