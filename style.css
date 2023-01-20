@@ -1,3 +1,7 @@
+#root {
+  background-color: rgb(250, 248, 217);
+}
+
 canvas {
   border-radius: 12px;
   box-shadow: 0 3px 5px rgba(0, 0, 0, 0.5);
@@ -9,7 +13,26 @@ canvas {
   margin: 10px;
 }
 
+.buttons-holder button {
+  height: 3.5em; 
+  width: 5.5em;
+  margin: .75em;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.5);
+}
 
+#circle-button {
+  background-color: rgb(14, 138, 214);
+  color : rgb(255, 182, 46 );
+}
+
+#triangle-button {
+  background-color: rgb(29, 203, 39);
+  color : rgb(251, 141, 252 );
+}
+
+#square-button {
+  background-color: rgb(246, 253, 29);
+}
 
 #mainTitle {
   margin: 0.5em;
