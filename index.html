@@ -9,7 +9,6 @@
 
   <!-- CDN P5.JS Library -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.1/p5.min.js"></script>
-  <link rel="stylesheet" href="style.css">
 
   <!-- Google Fonts -->
   <style>
@@ -22,6 +21,9 @@
   <!-- Bootstrap -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css">
 
 </head>
 
@@ -45,7 +47,7 @@
   <div class="container-fluid">
     <div class="row justify-content-center">
       <div class="col-10">
-        <div class="accordion" id="accordionExample">
+        <div class="accordion" id="accordion">
           <div class="accordion-item">
             <h2 class="accordion-header" id="headingOne">
               <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne"
@@ -53,8 +55,8 @@
                 About the Project
               </button>
             </h2>
-            <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
-              data-bs-parent="#accordionExample">
+            <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne"
+              data-bs-parent="#accordion">
               <div class="accordion-body">
                 <p>
                   Playful Shapes is a generative art project made by <a
@@ -163,6 +165,7 @@
   </div>
 </body>
 
+<!-- Bootstrap JS -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
   integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
 
