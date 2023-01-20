@@ -17,14 +17,17 @@ class ForegroundShapes {
 
         if (backgroundShape === 'circle') {
             stroke('blue');
+            // noStroke();
             fill(255, 130, 0, 255);
         };
         if (backgroundShape === 'triangle') {
             stroke('green');
+            // noStroke();
             fill(255, 160, 175, 255)
         };
         if (backgroundShape === 'square') {
             stroke('white');
+            // noStroke();
             fill(5, 5, 5, 255);
         };
 
