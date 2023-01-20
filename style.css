@@ -13,8 +13,8 @@ canvas {
 }
 
 .buttons-holder button {
-  height: 3.5em;
-  width: 5.5em;
+  height: 2.75em;
+  width: 4.5em;
   margin: 0.5em;
   box-shadow: 0 3px 5px rgba(0, 0, 0, 0.5);
 }
@@ -38,7 +38,9 @@ canvas {
   text-align: center;
   font-family: 'MuseoModerno', cursive;
   color: cornflowerblue;
-  letter-spacing: -3px;
+  letter-spacing: -9px;
+  font-weight: 600;
+  font-size: 4em;
 }
 
 #mainTitle span {
@@ -141,14 +143,38 @@ input:checked+.slider-red:before {
   padding: 0.25em;
   font-size: 1.2em;
   font-family: 'Archivo', sans-serif;
-  height: 100px;
 }
 
-.carousel-item {
+.accordion {
+  font-size: 1.1em;
+  font-family: 'Archivo', sans-serif;
+  margin: 0.75em;
+  margin-top: 0.1em;
+}
+
+.accordion-item {
+  background-color: rgb(251, 247, 243);
+}
+
+.accordion button {
+  font-size: 0.6em;
+  font-family: 'Archivo', sans-serif;
+}
+
+.accordion {
+  --bs-accordion-bg: linen;
+  --bs-accordion-color: black;
+  --bs-accordion-active-bg: linen;
+  --bs-accordion-active-color: black;
+  --bs-accordion-border-color: cornflowerblue;
+  --bs-accordion-btn-focus-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* .carousel-item {
   padding: 0 120px;
   padding-top: 10px;
 }
 
 .carousel button {
   margin: 0 -55px;
-}
+} */

@@ -21,9 +21,9 @@ if (!foregroundShape) {
 };
 
 function setup() {
-  let canvas = createCanvas(700, 700);
+  let canvas = createCanvas(600, 600);
   canvas.parent("p5-canvas");
-  graphicsLayer = createGraphics(700, 700);
+  graphicsLayer = createGraphics(600, 600);
 
   circleButton = select("#circle-button");
   triangleButton = select("#triangle-button");
