@@ -29,7 +29,7 @@ class BackgroundShapes {
 
     if (backgroundShape === "triangle") {
       graphicsLayer.fill(this.greenToneR, this.greenToneG, this.greenToneB, 150);
-      graphicsLayer.triangle(this.x - 125, this.y - 50, this.x - 25, this.y + 75, this.x + 75, this.y - 50)
+      graphicsLayer.triangle(this.x - 125, this.y - 50, this.x - 25, this.y - 200, this.x + 75, this.y - 50)
     };
 
     if (backgroundShape === "square") {
