@@ -134,3 +134,11 @@ input:checked+.slider-red:before {
   flex: 1;
   text-align: right;
 }
+
+/* .carousel-inner {
+  padding: 5em;
+} */
+
+.carousel button{
+  margin: 0em 3em;
+};
