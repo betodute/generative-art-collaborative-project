@@ -10,24 +10,23 @@ canvas {
 .buttons-holder {
   text-align: center;
   align-items: center;
-  margin: 10px;
 }
 
 .buttons-holder button {
-  height: 3.5em; 
+  height: 3.5em;
   width: 5.5em;
-  margin: .75em;
+  margin: 0.5em;
   box-shadow: 0 3px 5px rgba(0, 0, 0, 0.5);
 }
 
 #circle-button {
   background-color: rgb(14, 138, 214);
-  color : rgb(255, 182, 46 );
+  color: rgb(255, 182, 46);
 }
 
 #triangle-button {
   background-color: rgb(29, 203, 39);
-  color : rgb(251, 141, 252 );
+  color: rgb(251, 141, 252);
 }
 
 #square-button {
@@ -39,6 +38,15 @@ canvas {
   text-align: center;
   font-family: 'MuseoModerno', cursive;
   color: cornflowerblue;
+  letter-spacing: -3px;
+}
+
+#mainTitle span {
+  display: inline-block;
+}
+
+#mainTitle span:hover {
+  transform: scale(1.35);
 }
 
 #intro-text {
@@ -50,17 +58,13 @@ canvas {
   text-align: center;
 }
 
-#toggle-switch {
-  cursor: pointer;
-  width: 3em;
-  height: 1.5em;
-}
-
 .switch {
   position: relative;
   display: inline-block;
   width: 60px;
   height: 34px;
+  cursor: pointer;
+  margin: 0.5em;
 }
 
 .switch input {
@@ -108,10 +112,12 @@ input:checked+.slider-red:before {
 /* Rounded sliders */
 .slider-red.round {
   border-radius: 34px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .slider-red.round:before {
   border-radius: 50%;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .switch-holder {
