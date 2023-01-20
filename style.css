@@ -1,5 +1,5 @@
 #root {
-  background-color: rgb(250, 248, 217);
+  background-color: blanchedalmond;
 }
 
 canvas {
@@ -34,7 +34,7 @@ canvas {
 }
 
 #mainTitle {
-  margin: 0.5em;
+  margin: 0.3em;
   text-align: center;
   font-family: 'MuseoModerno', cursive;
   color: cornflowerblue;
@@ -47,11 +47,7 @@ canvas {
 
 #mainTitle span:hover {
   transform: scale(1.35);
-}
-
-#intro-text {
-  font-size: 1.2em;
-  font-family: 'Archivo', sans-serif;
+  cursor: pointer;
 }
 
 #right-column {
@@ -135,10 +131,24 @@ input:checked+.slider-red:before {
   text-align: right;
 }
 
-/* .carousel-inner {
-  padding: 5em;
-} */
 
-.carousel button{
-  margin: 0em 3em;
-};
+.carousel {
+  border: solid black;
+  border-radius: 12px;
+  background-color: linen;
+  margin: 0.75em;
+  margin-top: 0.1em;
+  padding: 0.25em;
+  font-size: 1.2em;
+  font-family: 'Archivo', sans-serif;
+  height: 100px;
+}
+
+.carousel-item {
+  padding: 0 120px;
+  padding-top: 10px;
+}
+
+.carousel button {
+  margin: 0 -55px;
+}
