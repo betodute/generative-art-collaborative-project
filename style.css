@@ -13,8 +13,8 @@ canvas {
 }
 
 .buttons-holder button {
-  height: 3.5em;
-  width: 5.5em;
+  height: 2.75em;
+  width: 4.5em;
   margin: 0.5em;
   box-shadow: 0 3px 5px rgba(0, 0, 0, 0.5);
 }
@@ -38,7 +38,9 @@ canvas {
   text-align: center;
   font-family: 'MuseoModerno', cursive;
   color: cornflowerblue;
-  letter-spacing: -3px;
+  letter-spacing: -9px;
+  font-weight: 600;
+  font-size: 4em;
 }
 
 #mainTitle span {
