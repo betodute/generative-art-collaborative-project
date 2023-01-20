@@ -141,14 +141,26 @@ input:checked+.slider-red:before {
   padding: 0.25em;
   font-size: 1.2em;
   font-family: 'Archivo', sans-serif;
-  height: 100px;
 }
 
-.carousel-item {
+.accordion {
+  font-size: 1.1em;
+  font-family: 'Archivo', sans-serif;
+  margin: 0.75em;
+  margin-top: 0.1em;
+
+}
+
+.accordion button {
+  font-size: 0.6em;
+  font-family: 'Archivo', sans-serif;
+}
+
+/* .carousel-item {
   padding: 0 120px;
   padding-top: 10px;
 }
 
 .carousel button {
   margin: 0 -55px;
-}
+} */
