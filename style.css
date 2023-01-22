@@ -52,6 +52,10 @@ canvas {
   cursor: pointer;
 }
 
+.subtitle {
+  text-align: center;
+}
+
 #right-column {
   text-align: center;
 }

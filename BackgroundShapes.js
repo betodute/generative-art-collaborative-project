@@ -1,7 +1,7 @@
 class BackgroundShapes {
   constructor(backgroundShape) {
-    this.x = random(600);
-    this.y = random(600);
+    this.x = random(windowWidth);
+    this.y = random(800);
 
     this.blueToneR = random(0, 100);
     this.blueToneG = random(0, 125);
