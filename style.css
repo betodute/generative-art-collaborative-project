@@ -7,12 +7,47 @@ canvas {
   box-shadow: 0 3px 5px rgba(0, 0, 0, 0.5);
 }
 
-.buttons-holder {
+/* title, subtitle, header, footer */
+#main-title {
+  margin: 0.3em;
+  text-align: center;
+  font-family: 'MuseoModerno', cursive;
+  color: cornflowerblue;
+  letter-spacing: -9px;
+  font-weight: 600;
+  font-size: 4em;
+}
+
+#main-title span {
+  display: inline-block;
+}
+
+#main-title span:hover {
+  transform: scale(1.35);
+  cursor: pointer;
+}
+
+#subtitle {
+  text-align: center;
+  margin: 3px;
+}
+
+#main-column {
+  text-align: center;
+  margin-bottom: 3px;
+}
+
+#footer-text {
+  margin-top: 2px;
+}
+
+/* shape buttons */
+#buttons-holder {
   text-align: center;
   align-items: center;
 }
 
-.buttons-holder button {
+#buttons-holder button {
   height: 2.75em;
   width: 4.5em;
   margin: 0.5em;
@@ -33,33 +68,7 @@ canvas {
   background-color: rgb(246, 253, 29);
 }
 
-#mainTitle {
-  margin: 0.3em;
-  text-align: center;
-  font-family: 'MuseoModerno', cursive;
-  color: cornflowerblue;
-  letter-spacing: -9px;
-  font-weight: 600;
-  font-size: 4em;
-}
-
-#mainTitle span {
-  display: inline-block;
-}
-
-#mainTitle span:hover {
-  transform: scale(1.35);
-  cursor: pointer;
-}
-
-.subtitle {
-  text-align: center;
-}
-
-#right-column {
-  text-align: center;
-}
-
+/* toggle switch */
 .switch {
   position: relative;
   display: inline-block;
@@ -111,7 +120,6 @@ input:checked+.slider-red:before {
   transform: translateX(26px);
 }
 
-/* Rounded sliders */
 .slider-red.round {
   border-radius: 34px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
@@ -122,63 +130,17 @@ input:checked+.slider-red:before {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
 }
 
-.switch-holder {
+#switch-holder {
   width: 250px;
   align-items: center;
 }
 
-.switch-text-left {
-  flex: 1;
-  text-align: left;
-}
-
-.switch-text-right {
+#switch-text-left {
   flex: 1;
   text-align: right;
 }
 
-
-.carousel {
-  border: solid black;
-  border-radius: 12px;
-  background-color: linen;
-  margin: 0.75em;
-  margin-top: 0.1em;
-  padding: 0.25em;
-  font-size: 1.2em;
-  font-family: 'Archivo', sans-serif;
+#switch-text-right {
+  flex: 1;
+  text-align: left;
 }
-
-.accordion {
-  font-size: 1.1em;
-  font-family: 'Archivo', sans-serif;
-  margin: 0.75em;
-  margin-top: 0.1em;
-}
-
-.accordion-item {
-  background-color: rgb(251, 247, 243);
-}
-
-.accordion button {
-  font-size: 0.6em;
-  font-family: 'Archivo', sans-serif;
-}
-
-.accordion {
-  --bs-accordion-bg: linen;
-  --bs-accordion-color: black;
-  --bs-accordion-active-bg: linen;
-  --bs-accordion-active-color: black;
-  --bs-accordion-border-color: cornflowerblue;
-  --bs-accordion-btn-focus-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
-}
-
-/* .carousel-item {
-  padding: 0 120px;
-  padding-top: 10px;
-}
-
-.carousel button {
-  margin: 0 -55px;
-} */
