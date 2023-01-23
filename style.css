@@ -34,7 +34,7 @@ canvas {
 }
 
 #mainTitle {
-  margin: 0.3em;
+  margin: 0.2em;
   text-align: center;
   font-family: 'MuseoModerno', cursive;
   color: cornflowerblue;
@@ -54,6 +54,7 @@ canvas {
 
 .subtitle {
   text-align: center;
+  margin-bottom: 1em;
 }
 
 #right-column {

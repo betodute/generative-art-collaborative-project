@@ -21,9 +21,9 @@ if (!foregroundShape) {
 };
 
 function setup() {
-  let canvas = createCanvas(windowWidth, 600);
+  let canvas = createCanvas(windowWidth - 50, 600);
   canvas.parent("p5-canvas");
-  graphicsLayer = createGraphics(windowWidth, 600);
+  graphicsLayer = createGraphics(windowWidth - 50, 600);
 
   circleButton = select("#circle-button");
   triangleButton = select("#triangle-button");
@@ -55,7 +55,7 @@ function setup() {
 };
 
 function windowResized() {
-  resizeCanvas(windowWidth, 600);
+  resizeCanvas(windowWidth - 50, 600);
 }
 
 function draw() {
