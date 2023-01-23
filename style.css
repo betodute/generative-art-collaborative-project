@@ -18,6 +18,12 @@ canvas {
   font-size: 4em;
 }
 
+@media (sm) {
+  #main-title {
+    font-size: 2em;
+  }
+}
+
 #main-title span {
   display: inline-block;
 }
