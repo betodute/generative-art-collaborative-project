@@ -56,6 +56,7 @@ function setup() {
 
 function windowResized() {
   resizeCanvas(windowWidth, 600);
+  graphicsLayer.resizeCanvas(windowWidth, 600);
 }
 
 function draw() {
