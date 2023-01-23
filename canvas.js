@@ -1,4 +1,4 @@
-let backgroundShapes, foregroundShapes, backgroundShape, foregroundShape, graphicsLayer;
+let backgroundShapes, foregroundShapes, backgroundShape, foregroundShape, canvas, graphicsLayer;
 let circleButton, triangleButton, squareButton;
 
 const toggleSwitch = document.getElementById("toggle-switch");
@@ -21,9 +21,14 @@ if (!foregroundShape) {
 };
 
 function setup() {
-  let canvas = createCanvas(windowWidth - 50, 600);
-  canvas.parent("p5-canvas");
+  canvas = createCanvas(windowWidth - 50, 600);
   graphicsLayer = createGraphics(windowWidth - 50, 600);
+  canvas.parent("p5-canvas");
+
+  if (windowWidth < 576) {
+    resizeCanvas(windowWidth - 50, 400);
+    graphicsLayer.resizeCanvas(windowWidth, 400);
+  }
 
   circleButton = select("#circle-button");
   triangleButton = select("#triangle-button");
@@ -55,8 +60,14 @@ function setup() {
 };
 
 function windowResized() {
-  resizeCanvas(windowWidth - 50, 600);
-  graphicsLayer.resizeCanvas(windowWidth, 600);
+  if (windowWidth < 576) {
+    resizeCanvas(windowWidth - 50, 400);
+    graphicsLayer.resizeCanvas(windowWidth, 400);
+  }
+  else {
+    resizeCanvas(windowWidth - 50, 600);
+    graphicsLayer.resizeCanvas(windowWidth, 600);
+  }
 }
 
 function draw() {
