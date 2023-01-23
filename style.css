@@ -32,7 +32,7 @@ canvas {
   margin: 3px;
 }
 
-#main-column {
+.column {
   text-align: center;
   margin-bottom: 3px;
 }
