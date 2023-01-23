@@ -1,7 +1,12 @@
-# generative-art-collaborative-project
-### Playful Shapes is a generative art project using JavaScript produced by [Matthew Sanner](https://github.com/gravityskunk) and [Alberto Duarte](https://github.com/betodute) using the P5 JavaScript library.
+# Playful Shapes
 
-![JavaScript](https://img.shields.io/badge/-JavaScript-333333?logo=javascript) ![P5](https://img.shields.io/badge/-P5-333333?logo=p5.js) ![HTML5](https://img.shields.io/badge/-HTML5-333333?logo=HTML5) ![CSS](https://img.shields.io/badge/-CSS-333333?logo=css3) 
+
+
+### This is a generative art project using the P5 JavaScript library by [Matthew Sanner](https://github.com/gravityskunk) and [Alberto Duarte](https://github.com/betodute).
+
+![JavaScript](https://img.shields.io/badge/-JavaScript-333333?logo=javascript) ![P5](https://img.shields.io/badge/-P5-333333?logo=p5.js) ![HTML5](https://img.shields.io/badge/-HTML5-333333?logo=HTML5) ![CSS](https://img.shields.io/badge/-CSS-333333?logo=css3)
+
+<img width="600" alt="Picture for ReadMe" src="https://user-images.githubusercontent.com/20879642/214134617-38711b4d-c53c-4066-b6e7-feeeeb7aefd1.png">
    
 The code is structured using conventional programming principles by separating JS files by concern. The class objects for the background and foreground shapes are called separately inside the canvas script to create the layered effect.
           
