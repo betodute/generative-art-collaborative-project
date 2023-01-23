@@ -6,7 +6,7 @@
 
 ![JavaScript](https://img.shields.io/badge/-JavaScript-333333?logo=javascript) ![P5](https://img.shields.io/badge/-P5-333333?logo=p5.js) ![HTML5](https://img.shields.io/badge/-HTML5-333333?logo=HTML5) ![CSS](https://img.shields.io/badge/-CSS-333333?logo=css3)
 
-![Main Project Image]([http://url/to/img.png](https://user-images.githubusercontent.com/20879642/214132350-f0308e93-e0e9-4f81-87ee-ce517d119d58.png))
+https://user-images.githubusercontent.com/20879642/214132350-f0308e93-e0e9-4f81-87ee-ce517d119d58.png
    
 The code is structured using conventional programming principles by separating JS files by concern. The class objects for the background and foreground shapes are called separately inside the canvas script to create the layered effect.
           
