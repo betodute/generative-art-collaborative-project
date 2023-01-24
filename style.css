@@ -14,7 +14,7 @@ canvas {
   margin-bottom: 8px;
 }
 
-/* Title, subtitle */
+/* Title, footer*/
 #main-title {
   margin-top: 5px;
   margin-bottom: 8px;
@@ -39,6 +39,10 @@ canvas {
 #main-title span:hover {
   transform: scale(1.35);
   cursor: pointer;
+}
+
+#footer-text {
+  margin-bottom: 3px;
 }
 
 /* Toggle switch */
