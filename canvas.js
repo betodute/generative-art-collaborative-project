@@ -2,7 +2,7 @@ let backgroundShapes, foregroundShapes, backgroundShape, foregroundShape
 let canvas, graphicsLayer;
 let circleButton, triangleButton, squareButton;
 
-// toggle switch
+// Toggle switch
 const toggleSwitch = document.getElementById("toggle-switch");
 let toggleStatus = false;
 toggleSwitch.addEventListener("change", function () {
@@ -13,7 +13,7 @@ toggleSwitch.addEventListener("change", function () {
   }
 })
 
-// default to circle
+// Default to circle
 if (!backgroundShape) {
   backgroundShape = "circle";
 };
@@ -22,7 +22,7 @@ if (!foregroundShape) {
 };
 
 function setup() {
-  // smart phone responsive canvas and graphic layer
+  // Smart phone responsive canvas and graphic layer
   if (windowWidth < 576) {
     canvas = createCanvas(windowWidth - 50, 400);
     graphicsLayer = createGraphics(windowWidth, 400);
@@ -32,9 +32,10 @@ function setup() {
     graphicsLayer = createGraphics(windowWidth, 600);
   }
 
+  // Assign canvas to specific div in html
   canvas.parent("p5-canvas");
 
-  // shape buttons response
+  // Shape buttons response
   circleButton = select("#circle-button");
   triangleButton = select("#triangle-button");
   squareButton = select("#square-button");
@@ -64,7 +65,7 @@ function setup() {
   });
 };
 
-// resize canvas on window resize with shorten canvas for smart phone
+// Resize canvas on window resize with shorten canvas for smart phone
 function windowResized() {
   if (windowWidth < 576) {
     resizeCanvas(windowWidth - 50, 400);
@@ -80,7 +81,7 @@ function draw() {
   background(0);
   image(graphicsLayer, 0, 0);
 
-  // create class instance of background and foreground shapes
+  // Render class instance of background and foreground shapes
   backgroundShapes = new BackgroundShapes(backgroundShape);
   backgroundShapes.render();
 

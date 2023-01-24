@@ -9,7 +9,7 @@ canvas {
   box-shadow: 0 3px 5px rgba(0, 0, 0, 0.5);
 }
 
-/* Title, subtitle, header, footer */
+/* Columns, title, subtitle */
 .column {
   text-align: center;
   margin-bottom: 8px;
@@ -45,33 +45,30 @@ canvas {
   text-align: center;
 }
 
-/* Shape buttons */
-#buttons-holder {
+/* Toggle switch */
+#switch-holder {
+  width: 250px;
   align-items: center;
 }
 
-#buttons-holder button {
-  height: 44px;
-  width: 72px;
-  margin: 8px;
-  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.5);
+#switch-holder .bi {
+  width: 1.5em;
+  height: 1.5em;
+  fill: black;
 }
 
-#circle-button {
-  background-color: rgb(14, 138, 214);
-  color: rgb(255, 182, 46);
+#switch-text-left {
+  flex: 1;
+  text-align: right;
+  font-size: 1.6em;
 }
 
-#triangle-button {
-  background-color: rgb(29, 203, 39);
-  color: rgb(251, 141, 252);
+#switch-text-right {
+  flex: 1;
+  text-align: left;
+  font-size: 1.6em;
 }
 
-#square-button {
-  background-color: rgb(246, 253, 29);
-}
-
-/* Toggle switch */
 #switch {
   position: relative;
   display: inline-block;
@@ -133,17 +130,39 @@ input:checked+#slider-red:before {
   box-shadow: 0 3px 5px rgba(0, 0, 0, 0.5);
 }
 
-#switch-holder {
-  width: 250px;
+/* Shape buttons */
+#buttons-holder {
+  display: flex;
   align-items: center;
+  justify-content: center;
 }
 
-#switch-text-left {
-  flex: 1;
-  text-align: right;
+#buttons-holder button {
+  height: 44px;
+  width: 72px;
+  margin: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.5);
 }
 
-#switch-text-right {
-  flex: 1;
-  text-align: left;
+#buttons-holder i {
+  margin-top: 4px;
+  font-size: 1.85em;
+  fill: currentColor;
+}
+
+#circle-button {
+  background-color: rgb(14, 138, 214);
+  color: rgb(255, 182, 46);
+}
+
+#triangle-button {
+  background-color: rgb(29, 203, 39);
+  color: rgb(251, 141, 252);
+}
+
+#square-button {
+  background-color: rgb(246, 253, 29);
 }

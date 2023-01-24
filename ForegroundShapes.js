@@ -1,5 +1,6 @@
 class ForegroundShapes {
     constructor(foregroundShape, backgroundShape) {
+        // Creates some variables with Perlin noise to create shapes that change randomly and also on the basis of cursor position
         this.ang1 = TWO_PI * noise(0.01 * frameCount + 10);
         this.ang2 = TWO_PI * noise(0.01 * frameCount + 20);
         this.ang3 = TWO_PI * noise(0.01 * frameCount + 30);
@@ -7,15 +8,13 @@ class ForegroundShapes {
         this.tx = 200 * noise(0.01 * frameCount + 50) + mouseY / 7;
         this.size1 = 300 * noise(0.01 * frameCount + 60);
         this.size2 = 100 * noise(0.01 * frameCount + 60);
-        this.foregroundShape = foregroundShape;
-        this.backgroundShape = backgroundShape;
     }
 
     render() {
         frameRate(30);
         rectMode(CENTER);
 
-        // shape border color and fill color
+        // Shape border color and fill color
         if (backgroundShape === 'circle') {
             stroke('blue');
             fill(255, 130, 0, 255);
@@ -30,7 +29,7 @@ class ForegroundShapes {
         };
 
         translate(width / 2, height / 2);
-        // creates 8 shapes in circle around center
+        // Creates 8 shapes in circle around center
         for (var i = 0; i < 8; i++) {
             push();
             rotate(this.ang1 + TWO_PI * i / 8);
@@ -39,12 +38,12 @@ class ForegroundShapes {
                 circle(0, 0, this.size1);
             }
             if (foregroundShape === 'triangle') {
-                triangle(0, 0, this.size1, this.size1, this.size1 * 1.5, this.size1 * 1.5);
+                triangle(-this.size1 / 2.5, -this.size1 / 2.5, this.size1 / 2.5, -this.size1 / 2.5, this.size1 / 2.5, this.size1 / 2.5);
             }
             if (foregroundShape === 'square') {
                 square(0, 0, this.size1);
             }
-            // creates 6 shapes around the 8 shapes
+            // Creates 6 shapes around the 8 shapes
             for (var j = 0; j < 6; j++) {
                 push();
                 rotate(this.ang2 + TWO_PI * j / 6);

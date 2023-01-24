@@ -1,5 +1,6 @@
 class BackgroundShapes {
   constructor(backgroundShape) {
+    // Randomly select location and shape colors
     this.x = random(windowWidth);
     this.y = random(800);
 
@@ -14,14 +15,14 @@ class BackgroundShapes {
     this.yellowToneR = random(180, 255);
     this.yellowToneG = random(180, 255);
     this.yellowToneB = random(0, 255);
-
-    this.backgroundShape = backgroundShape;
   };
 
   render() {
+    // Slower framerate for less chaotic looking background
     frameRate(5);
     graphicsLayer.noStroke();
 
+    // Creates background shapes based on button pushed
     if (backgroundShape === "circle") {
       graphicsLayer.fill(this.blueToneR, this.blueToneG, this.blueToneB, 150);
       graphicsLayer.circle(this.x, this.y, 150);
