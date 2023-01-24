@@ -16,7 +16,7 @@ canvas {
 
 /* Title, subtitle */
 #main-title {
-  margin: 5px;
+  margin-top: 5px;
   margin-bottom: 8px;
   font-family: 'MuseoModerno', cursive;
   color: cornflowerblue;
