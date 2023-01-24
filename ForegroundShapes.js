@@ -1,8 +1,8 @@
 class ForegroundShapes {
     constructor(foregroundShape, backgroundShape) {
-        this.ang1 = TWO_PI * noise(0.01 * frameCount + 10) /*+ mouseX / 100*/;
-        this.ang2 = TWO_PI * noise(0.01 * frameCount + 20) /*+ mouseY / 100*/;
-        this.ang3 = TWO_PI * noise(0.01 * frameCount + 30) /*+ (mouseX + mouseY) / 100*/;
+        this.ang1 = TWO_PI * noise(0.01 * frameCount + 10);
+        this.ang2 = TWO_PI * noise(0.01 * frameCount + 20);
+        this.ang3 = TWO_PI * noise(0.01 * frameCount + 30);
         this.rx = 60 * noise(0.01 * frameCount + 40) + mouseX / 7;
         this.tx = 200 * noise(0.01 * frameCount + 50) + mouseY / 7;
         this.size1 = 300 * noise(0.01 * frameCount + 60);
@@ -15,23 +15,22 @@ class ForegroundShapes {
         frameRate(30);
         rectMode(CENTER);
 
+        // shape border color and fill color
         if (backgroundShape === 'circle') {
             stroke('blue');
-            // noStroke();
             fill(255, 130, 0, 255);
         };
         if (backgroundShape === 'triangle') {
             stroke('green');
-            // noStroke();
-            fill(255, 160, 175, 255)
+            fill(255, 160, 175, 255);
         };
         if (backgroundShape === 'square') {
             stroke('white');
-            // noStroke();
             fill(5, 5, 5, 255);
         };
 
         translate(width / 2, height / 2);
+        // creates 8 shapes in circle around center
         for (var i = 0; i < 8; i++) {
             push();
             rotate(this.ang1 + TWO_PI * i / 8);
@@ -40,11 +39,12 @@ class ForegroundShapes {
                 circle(0, 0, this.size1);
             }
             if (foregroundShape === 'triangle') {
-                triangle(0, 0, this.rx, this.rx, this.tx, this.tx);
+                triangle(0, 0, this.size1, this.size1, this.size1 * 1.5, this.size1 * 1.5);
             }
             if (foregroundShape === 'square') {
-                rect(0, 0, this.size1, this.size1);
+                square(0, 0, this.size1);
             }
+            // creates 6 shapes around the 8 shapes
             for (var j = 0; j < 6; j++) {
                 push();
                 rotate(this.ang2 + TWO_PI * j / 6);
@@ -54,14 +54,13 @@ class ForegroundShapes {
                     circle(this.rx, 0, this.size2);
                 }
                 if (foregroundShape === 'triangle') {
-                    triangle(this.size1, this.size2, this.rx, this.rx, this.tx, this.tx);
+                    triangle(this.rx, 0, this.size2, this.size2, this.size2 * 1.5, this.size2 * 1.5);
                 }
                 if (foregroundShape === 'square') {
-                    rect(this.rx, 0, this.size2, this.size2);
+                    square(this.rx, 0, this.size2);
                 }
                 pop();
             }
-            translate()
             pop();
         }
     }

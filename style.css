@@ -1,5 +1,7 @@
 #root {
   background-color: blanchedalmond;
+  font-size: 16px;
+  font-family: 'Archivo', sans-serif;
 }
 
 canvas {
@@ -7,9 +9,14 @@ canvas {
   box-shadow: 0 3px 5px rgba(0, 0, 0, 0.5);
 }
 
-/* title, subtitle, header, footer */
+/* Title, subtitle, header, footer */
+.column {
+  text-align: center;
+  margin-bottom: 8px;
+}
+
 #main-title {
-  margin: 0.3em;
+  margin: 5px;
   text-align: center;
   font-family: 'MuseoModerno', cursive;
   color: cornflowerblue;
@@ -36,28 +43,17 @@ canvas {
 
 #subtitle {
   text-align: center;
-  margin: 3px;
 }
 
-.column {
-  text-align: center;
-  margin-bottom: 3px;
-}
-
-#footer-text {
-  margin-top: 2px;
-}
-
-/* shape buttons */
+/* Shape buttons */
 #buttons-holder {
-  text-align: center;
   align-items: center;
 }
 
 #buttons-holder button {
-  height: 2.75em;
-  width: 4.5em;
-  margin: 0.5em;
+  height: 44px;
+  width: 72px;
+  margin: 8px;
   box-shadow: 0 3px 5px rgba(0, 0, 0, 0.5);
 }
 
@@ -75,21 +71,21 @@ canvas {
   background-color: rgb(246, 253, 29);
 }
 
-/* toggle switch */
-.switch {
+/* Toggle switch */
+#switch {
   position: relative;
   display: inline-block;
+  cursor: pointer;
   width: 60px;
   height: 34px;
-  cursor: pointer;
-  margin: 0.5em;
+  margin: 8px;
 }
 
-.switch input {
+#switch input {
   display: none;
 }
 
-.slider-red {
+#slider-red {
   position: absolute;
   cursor: pointer;
   top: 0;
@@ -101,7 +97,7 @@ canvas {
   transition: .4s;
 }
 
-.slider-red:before {
+#slider-red:before {
   position: absolute;
   content: "";
   height: 26px;
@@ -113,28 +109,28 @@ canvas {
   transition: .4s;
 }
 
-input:checked+.slider-red {
+input:checked+#slider-red {
   background-color: #FE2712;
 }
 
-input:focus+.slider-red {
+input:focus+#slider-red {
   box-shadow: 0 0 1px #FE2712;
 }
 
-input:checked+.slider-red:before {
+input:checked+#slider-red:before {
   -webkit-transform: translateX(26px);
   -ms-transform: translateX(26px);
   transform: translateX(26px);
 }
 
-.slider-red.round {
+#slider-red {
   border-radius: 34px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.5);
 }
 
-.slider-red.round:before {
+#slider-red:before {
   border-radius: 50%;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.5);
 }
 
 #switch-holder {

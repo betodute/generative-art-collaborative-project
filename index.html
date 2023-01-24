@@ -28,6 +28,7 @@
 </head>
 
 <body id="root">
+  <!-- Title and subtitle -->
   <div class="container-fluid">
     <div class="row">
       <div class="col-12 column">
@@ -53,7 +54,7 @@
         </p>
       </div>
     </div>
-
+    <!-- Canvas, slider, buttons -->
     <div class="row">
       <div class="col-12 column">
         <div id="p5-canvas"></div>
@@ -66,9 +67,9 @@
                   d="M8 1a.5.5 0 0 1 .5.5v11.793l3.146-3.147a.5.5 0 0 1 .708.708l-4 4a.5.5 0 0 1-.708 0l-4-4a.5.5 0 0 1 .708-.708L7.5 13.293V1.5A.5.5 0 0 1 8 1z" />
               </svg>
             </div>
-            <label class="switch">
+            <label id="switch">
               <input type="checkbox" id="toggle-switch">
-              <span class="slider-red round"></span>
+              <span id="slider-red"></span>
             </label>
             <div id="switch-text-right">
               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-arrow-up"
@@ -102,20 +103,18 @@
           </button>
         </div>
       </div>
+      <!-- Footer text -->
       <div class="row">
         <div class="col-12 column">
           <p id="footer-text">
             For more, check out our <a href="https://github.com/betodute/generative-art-collaborative-project">GitHub
-              repository</a>.
-            Special
-            thanks to <a href="https://www.youtube.com/@TheCodingTrain">The Coding Train</a>, <a
-              href="https://www.omnibus-type.com/">Omnibus-Type</a> and <a href="https://genekogan.com/">Gene
+              repository</a>. Special thanks to <a href="https://www.youtube.com/@TheCodingTrain">The Coding Train</a>,
+            <a href="https://www.omnibus-type.com/">Omnibus-Type</a> and <a href="https://genekogan.com/">Gene
               Kogan</a>.
           </p>
         </div>
       </div>
     </div>
-  </div>
   </div>
 </body>
 
@@ -126,6 +125,6 @@
 <!-- DOM Dependent Scripts -->
 <script src="BackgroundShapes.js"></script>
 <script src="ForegroundShapes.js"></script>
-<script type="text/javascript" src="canvas.js"></script>
+<script src="canvas.js"></script>
 
 </html>
