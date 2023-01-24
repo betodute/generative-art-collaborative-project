@@ -78,7 +78,9 @@ function windowResized() {
 }
 
 function draw() {
+  // Creates no-trails effect for foreground shapes
   background(0);
+  // Creates background shape layer
   image(graphicsLayer, 0, 0);
 
   // Render class instance of background and foreground shapes
