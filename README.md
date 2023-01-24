@@ -15,10 +15,10 @@ For general users Playful Shapes provides an aestetically pleasing color coordin
 ### Be listed as a contributer by helping with these pending features and issues:
 
 1. Each of the moving foreground shapes ascends in stacking order clockwise until it reaches the last shape. The last shape, however, is awkwardly stacked over both the previous and the first shape in the sequence. It is our desire to make each shape stack in the same way: over the previous but under the next.
-2. The background shapes pale in complexity compared to the movement of the foreground shapes. Changing the attributes of each background shape instance to make it more dynamic why still being cohesive is a welcomed pull request.
+2. The background shapes pale in complexity compared to the movement of the foreground shapes. Changing the attributes of each background shape instance to make it more dynamic while still being cohesive is a welcomed pull request.
 3. At one point during the completion of the MVP adding a Hexagon shape button was talked about as a possible feature.
 
-Don't be shy to reach out to talk about any other ideas you might have to improve the project. You can reach Beto at betodute@gmail.com and Matthew at gravityskunk@gmail.com or through our [group on Linked-In.](https://www.linkedin.com/groups/14100375/);
+Don't be shy to reach out to talk about any other ideas you might have to improve the project. You can reach Beto at betodute@gmail.com and Matthew at gravityskunk@gmail.com or through our [group on Linked-In.](https://www.linkedin.com/groups/14100375/)
 
 
 Special thanks to [The Coding Train](https://www.youtube.com/@TheCodingTrain) and [Gene Kogan](https://genekogan.com/) for inspiration, education, and code snippets.
