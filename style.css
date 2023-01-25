@@ -45,6 +45,44 @@ canvas {
   margin-bottom: 0px;
 }
 
+/* Shape buttons */
+#buttons-holder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#buttons-holder button {
+  height: 44px;
+  width: 72px;
+  margin: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.5);
+}
+
+#buttons-holder i {
+  margin-top: 4px;
+  font-size: 1.85em;
+  fill: currentColor;
+}
+
+#circle-button {
+  background-color: rgb(14, 138, 214);
+  color: rgb(255, 182, 46);
+}
+
+#triangle-button {
+  background-color: rgb(29, 203, 39);
+  color: rgb(251, 141, 252);
+}
+
+#square-button {
+  background-color: rgb(246, 253, 29);
+  color: rgb(0, 0, 0)
+}
+
 /* Toggle switch */
 #switch-holder {
   display: flex;
@@ -113,42 +151,4 @@ input:checked+#slider-red:before {
   -webkit-transform: translateX(26px);
   -ms-transform: translateX(26px);
   transform: translateX(26px);
-}
-
-/* Shape buttons */
-#buttons-holder {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-#buttons-holder button {
-  height: 44px;
-  width: 72px;
-  margin: 8px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.5);
-}
-
-#buttons-holder i {
-  margin-top: 4px;
-  font-size: 1.85em;
-  fill: currentColor;
-}
-
-#circle-button {
-  background-color: rgb(14, 138, 214);
-  color: rgb(255, 182, 46);
-}
-
-#triangle-button {
-  background-color: rgb(29, 203, 39);
-  color: rgb(251, 141, 252);
-}
-
-#square-button {
-  background-color: rgb(246, 253, 29);
-  color: rgb(0, 0, 0)
 }
