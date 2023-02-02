@@ -50,7 +50,6 @@ class BackgroundShapes {
 
     if (backgroundShape === "square") {
       graphicsLayer.fill(this.yellowToneR, this.yellowToneG, this.yellowToneB, 150);
-      graphicsLayer.stroke(5, 5, 5);
       graphicsLayer.square(this.x - 100, this.y - 100, 150);
     };
 
