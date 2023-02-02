@@ -32,21 +32,18 @@ class BackgroundShapes {
 
     if (backgroundShape === "triangle") {
       let triDirection = Math.floor(random(1,5));
+      graphicsLayer.fill(this.greenToneR, this.greenToneG, this.greenToneB, 150);
 
       if (triDirection === 1) {
-        graphicsLayer.fill(this.greenToneR, this.greenToneG, this.greenToneB, 150);
         graphicsLayer.triangle(this.x - 125, this.y - 50, this.x + 75, this.y - 50, this.x - 25, this.y - 200);
       };
       if (triDirection === 2) {
-        graphicsLayer.fill(this.greenToneR, this.greenToneG, this.greenToneB, 150);
         graphicsLayer.triangle(this.x - 125, this.y - 50, this.x - 125, this.y + 150, this.x + 25, this.y + 50);
       };
       if (triDirection === 3) {
-        graphicsLayer.fill(this.greenToneR, this.greenToneG, this.greenToneB, 150);
         graphicsLayer.triangle(this.x - 125, this.y - 50, this.x + 75, this.y - 50, this.x - 25, this.y + 100);
       };
       if (triDirection === 4) {
-        graphicsLayer.fill(this.greenToneR, this.greenToneG, this.greenToneB, 150);
         graphicsLayer.triangle(this.x + 125, this.y - 0, this.x + 125, this.y - 200, this.x - 25, this.y - 100);
       };
     };
