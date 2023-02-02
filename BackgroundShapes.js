@@ -1,6 +1,6 @@
 class BackgroundShapes {
   constructor(backgroundShape) {
-    // Randomly select location and shape colors
+    // Randomly selects location and shape color tone
     this.x = random(windowWidth);
     this.y = random(800);
 
@@ -28,9 +28,27 @@ class BackgroundShapes {
       graphicsLayer.circle(this.x, this.y, 150);
     };
 
+    // Four possible directions for the triangle
+
     if (backgroundShape === "triangle") {
-      graphicsLayer.fill(this.greenToneR, this.greenToneG, this.greenToneB, 150);
-      graphicsLayer.triangle(this.x - 125, this.y - 50, this.x - 25, this.y - 200, this.x + 75, this.y - 50);
+      let triDirection = Math.floor(random(1,5));
+
+      if (triDirection === 1) {
+        graphicsLayer.fill(this.greenToneR, this.greenToneG, this.greenToneB, 150);
+        graphicsLayer.triangle(this.x - 125, this.y - 50, this.x + 75, this.y - 50, this.x - 25, this.y - 200);
+      };
+      if (triDirection === 2) {
+        graphicsLayer.fill(this.greenToneR, this.greenToneG, this.greenToneB, 150);
+        graphicsLayer.triangle(this.x - 125, this.y - 50, this.x - 125, this.y + 150, this.x + 25, this.y + 50);
+      };
+      if (triDirection === 3) {
+        graphicsLayer.fill(this.greenToneR, this.greenToneG, this.greenToneB, 150);
+        graphicsLayer.triangle(this.x - 125, this.y - 50, this.x + 75, this.y - 50, this.x - 25, this.y + 100);
+      };
+      if (triDirection === 4) {
+        graphicsLayer.fill(this.greenToneR, this.greenToneG, this.greenToneB, 150);
+        graphicsLayer.triangle(this.x + 125, this.y - 0, this.x + 125, this.y - 200, this.x - 25, this.y - 100);
+      };
     };
 
     if (backgroundShape === "square") {
