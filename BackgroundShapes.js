@@ -33,7 +33,7 @@ class BackgroundShapes {
     if (backgroundShape === "triangle") {
       let triDirection = Math.floor(random(1,5));
       graphicsLayer.fill(this.greenToneR, this.greenToneG, this.greenToneB, 150);
-
+      
       if (triDirection === 1) {
         graphicsLayer.triangle(this.x - 125, this.y - 50, this.x + 75, this.y - 50, this.x - 25, this.y - 200);
       };
@@ -50,6 +50,7 @@ class BackgroundShapes {
 
     if (backgroundShape === "square") {
       graphicsLayer.fill(this.yellowToneR, this.yellowToneG, this.yellowToneB, 150);
+      graphicsLayer.stroke(5, 5, 5);
       graphicsLayer.square(this.x - 100, this.y - 100, 150);
     };
 
