@@ -24,16 +24,17 @@ class BackgroundShapes {
 
     // Creates background shapes based on button pushed
     if (backgroundShape === "circle") {
+      // Circles range in size from 50 to 150
+      let circleSize = random(50, 150)
       graphicsLayer.fill(this.blueToneR, this.blueToneG, this.blueToneB, 150);
-      graphicsLayer.circle(this.x, this.y, 150);
+      graphicsLayer.circle(this.x, this.y, circleSize);
     };
-
-    // Four possible directions for the triangle
 
     if (backgroundShape === "triangle") {
       let triDirection = Math.floor(random(1,5));
       graphicsLayer.fill(this.greenToneR, this.greenToneG, this.greenToneB, 150);
-      
+       
+      // Four possible directions for the triangle
       if (triDirection === 1) {
         graphicsLayer.triangle(this.x - 125, this.y - 50, this.x + 75, this.y - 50, this.x - 25, this.y - 200);
       };
