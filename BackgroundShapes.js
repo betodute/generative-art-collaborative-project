@@ -8,9 +8,9 @@ class BackgroundShapes {
     this.blueToneG = random(0, 125);
     this.blueToneB = random(150, 255);
 
-    this.greenToneR = random(25, 180);
+    this.greenToneR = random(25, 170);
     this.greenToneG = random(125, 255);
-    this.greenToneB = random(25, 240);
+    this.greenToneB = random(25, 200);
 
     this.yellowToneR = random(180, 255);
     this.yellowToneG = random(180, 255);
