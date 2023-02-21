@@ -12,9 +12,9 @@ class BackgroundShapes {
     this.greenToneG = random(125, 255);
     this.greenToneB = random(25, 200);
 
-    this.yellowToneR = random(180, 255);
+    this.yellowToneR = random(180, 230);
     this.yellowToneG = random(180, 255);
-    this.yellowToneB = random(0, 255);
+    this.yellowToneB = random(50, 110);
   };
 
   render() {
@@ -50,8 +50,17 @@ class BackgroundShapes {
     };
 
     if (backgroundShape === "square") {
-      graphicsLayer.fill(this.yellowToneR, this.yellowToneG, this.yellowToneB, 150);
-      graphicsLayer.square(this.x - 100, this.y - 100, 150);
+      let size = 150;
+      while (size >= 50) {
+        graphicsLayer.fill(this.yellowToneR, this.yellowToneG, this.yellowToneB, 150);
+        graphicsLayer.square(this.x - 100, this.y - 100, size);
+        this.x += 25
+        this.y += 25
+        this.yellowToneR -= 25
+        this.yellowToneG -= 25
+        this.yellowToneB -= 25
+        size -= 50
+      }
     };
 
   };
