@@ -49,6 +49,7 @@ class BackgroundShapes {
       };
     };
 
+    // Three nested squares as a single BackgroundShapes square object
     if (backgroundShape === "square") {
       let size = 150;
       while (size >= 50) {
