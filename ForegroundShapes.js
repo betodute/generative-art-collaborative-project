@@ -24,7 +24,7 @@ class ForegroundShapes {
             fill(255, 160, 175, 255);
         };
         if (backgroundShape === 'square') {
-            stroke('white');
+            stroke('yellow');
             fill(5, 5, 5, 255);
         };
 
