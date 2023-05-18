@@ -24,11 +24,15 @@ class BackgroundShapes {
 
     // Creates background shapes based on button pushed
     if (backgroundShape === "circle") {
-      // Circles range in size from 50 to 150
-      let circleSize = random(50, 150)
+      let circleSize;
+      if (windowWidth < 600) {
+        circleSize = random(10, 50);
+      } else {
+        circleSize = random(50, 150);
+      }
       graphicsLayer.fill(this.blueToneR, this.blueToneG, this.blueToneB, 150);
       graphicsLayer.circle(this.x, this.y, circleSize);
-    };
+    }
 
     if (backgroundShape === "triangle") {
       let triDirection = Math.floor(random(1,5));
@@ -49,17 +53,18 @@ class BackgroundShapes {
       };
     };
 
+    // Three nested squares as a single BackgroundShapes square object
     if (backgroundShape === "square") {
-      let size = 150;
-      while (size >= 50) {
+      let squareSize = 150;
+      while (squareSize >= 50) {
         graphicsLayer.fill(this.yellowToneR, this.yellowToneG, this.yellowToneB, 150);
-        graphicsLayer.square(this.x - 100, this.y - 100, size);
+        graphicsLayer.square(this.x - 100, this.y - 100, squareSize);
         this.x += 25
         this.y += 25
         this.yellowToneR -= 25
         this.yellowToneG -= 25
         this.yellowToneB -= 25
-        size -= 50
+        squareSize -= 50
       }
     };
 
